@@ -35,7 +35,7 @@ export const mailSender = async (email, name, from, to, link) => {
         style="
           padding: 12px 16px;
           display: block;
-          width: 300px;
+          width: 200px;
           text-align: center;
           text-decoration: none;
           color: aliceblue;
