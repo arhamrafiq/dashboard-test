@@ -152,7 +152,7 @@ export const paymentscontroller = async (req, res) => {
 
 export const paymentCancel = (req, res) => {
   try {
-    res.redirect(`${process.env.RESPONSE_LINK}/cancel`);
+    res.redirect(`${process.env.RESPONSE_LINK}cancel`);
   } catch (error) {
     console.log(error);
     res.send("payment canceled");
@@ -187,7 +187,7 @@ export const paymentSuccesfull = async (req, res) => {
         } else {
           const upadting = orderModel
             .findByIdAndUpdate(oid, { paymentStatus: true }, { new: true })
-            .then(res.redirect(`${process.env.RESPONSE_LINK}/successfull`));
+            .then(res.redirect(`${process.env.RESPONSE_LINK}successfull`));
         }
       }
     );
