@@ -8,7 +8,7 @@ dotenv.config();
 
 // Payment Gateway Initializaion
 paypal.configure({
-  mode: "sandbox", //sandbox or live
+  mode: "live", //sandbox or live
   client_id: process.env.CLIENT_ID,
   client_secret: process.env.CLINET_SECRET,
 });
@@ -48,7 +48,7 @@ export const sendMailController = async (req, res) => {
     const name = order.name;
     const from = order.from;
     const to = order.to;
-    const link = `${process.env.RESPONSE_LINK}/payment/${id}`;
+    const link = `${process.env.RESPONSE_LINK}payment/${id}`;
     const mail = await mailSender(email, name, from, to, link);
     if (mail === 0) {
       return res.send({ success: true, message: "mail sent successfully" });
