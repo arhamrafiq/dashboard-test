@@ -111,8 +111,9 @@ export const paymentscontroller = async (req, res) => {
       payment_method: "paypal",
     },
     redirect_urls: {
-      return_url: `https://teal-mite-tie.cyclic.app/api/auth/payment/success/${oid}`,
-      cancel_url: "https://teal-mite-tie.cyclic.app/api/auth/payment/cancel",
+      return_url: `https://enchanting-moth-fashion.cyclic.app/api/auth/payment/success/${oid}`,
+      cancel_url:
+        "https://enchanting-moth-fashion.cyclic.app/api/auth/payment/cancel",
     },
     transactions: [
       {
