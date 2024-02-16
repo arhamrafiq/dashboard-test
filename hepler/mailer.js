@@ -14,7 +14,7 @@ const transporter = nodemailer.createTransport({
 
 export const mailSender = async (email, name, from, to, link) => {
   const info = await transporter.sendMail({
-    from: '"Traveliers" <arhmraf@gmail.com>', // sender address
+    from: '"Grey Hound Bus Ticket" <arhmraf@gmail.com>', // sender address
     to: `${email}`, // list of receivers
     subject: "✔ Pending Payment", // Subject line
     text: "Thanks for loging to my Website", // plain text body
